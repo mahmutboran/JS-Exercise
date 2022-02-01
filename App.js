@@ -26,4 +26,14 @@ function isPrime(num) {
   console.log(isPrime(42));
   const limit = Math.sqrt(42);
   console.log(limit);
- 
+
+  /* ********Exercise-4******** */
+
+ function twiceChar(text) {
+    let _text="";
+    for (let i = 0; i < text.length; i++) {
+        _text+=text[i]+text[i]
+    }
+    return _text;
+ }
+ console.log(twiceChar("Turkey"));

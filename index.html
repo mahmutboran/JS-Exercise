@@ -101,7 +101,32 @@ should return "found the needle at position 5" (in COBOL "found the needle at po
   }
 
         </pre>
-    </div>
+    </div><br>
+        <!-- *******************Exercise-4******************* -->
+        <div class="question">
+            <h3>Exercise-4: </h3>
+    <pre>
+        text = "Turkey";
+        
+        Let's write a program that prints every character twice
+        
+        output:
+        TTuurrkkeeyy</pre>
+        </div>
+        <div class="solute">
+            <h3>Solute:</h3>
+            <pre>
+                
+ function twiceChar(text) {
+    let _text="";
+    for (let i = 0; i < text.length; i++) {
+        _text+=text[i]+text[i]
+    }
+    return _text;
+ }
+ console.log(twiceChar("Turkey"));
+            </pre>
+        </div>
     
 </body>
 </html>
