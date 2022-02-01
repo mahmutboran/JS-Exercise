@@ -5,7 +5,13 @@ function findNeedle(haystack) {
           if (haystack[i] == "needle") {return `found the needle at position ${i}`} 
        } 
     }
-/* Exercise-2 */
+/* *********Exercise-2******* */
+function mySort(list) {
+    return list.sort(function (a,b) {return a-b});
+}
+console.log(mySort([10, 100, 250, 30, 1, 45]));
+
+/* ********Exercise-3******** */
 function isPrime(num) {
     if (num == 2) {return true;}
     if (num <= 1) {
@@ -17,6 +23,7 @@ function isPrime(num) {
         return true;
     }
   }
-  console.log(isPrime(4));
-  //const limit = Math.sqrt(num);
+  console.log(isPrime(42));
+  const limit = Math.sqrt(42);
+  console.log(limit);
  

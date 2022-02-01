@@ -48,8 +48,30 @@ should return "found the needle at position 5" (in COBOL "found the needle at po
 
         </pre>
     </div><br>
+    <!--******************* exercise-2********************** -->
     <div class="question">
         <h3>Exercise-2: </h3>
+<pre>Exercises-2
+    list = [10, 100, 250, 30, 1, 45];
+    
+    Sort numbers from smallest to largest using js related method
+    
+    output:
+    [1,10,30,45,100,250]</pre>
+    </div>
+    <div class="solute">
+        <h3>Solute:</h3>
+        <pre>
+            function mySort(list) {
+                return list.sort(function (a,b) {return a-b});
+            }
+            console.log(mySort([10, 100, 250, 30, 1, 45]));
+
+        </pre>
+    </div><br>
+    <!-- *******************Exercise-3******************* -->
+    <div class="question">
+        <h3>Exercise-3: </h3>
 <pre>Define a function that takes one integer argument and returns logical value true or false depending on if the integer is a prime.
 
     Per Wikipedia, a prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
@@ -67,16 +89,16 @@ should return "found the needle at position 5" (in COBOL "found the needle at po
         <h3>Solute:</h3>
         <pre>
             function isPrime(num) {
-                if (num == 2) {return true;}
-                if (num <= 1) {
-                    return false;
-                } else {
-                    for (let i = 2; i <= Math.sqrt(num); i++){
-                        if (num%i===0) {return false; } 
-                    }
-                    return true;
-                }
-              }
+    if (num == 2) {return true;}
+    if (num <= 1) {
+        return false;
+    } else {
+        for (let i = 2; i <= Math.sqrt(num); i++){
+            if (num%i===0) {return false; } 
+        }
+        return true;
+    }
+  }
 
         </pre>
     </div>
