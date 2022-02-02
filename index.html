@@ -126,7 +126,83 @@ should return "found the needle at position 5" (in COBOL "found the needle at po
  }
  console.log(twiceChar("Turkey"));
             </pre>
-        </div>
-    
+        </div><br>
+            <!-- *******************Exercise-5******************* -->
+            <div class="question">
+                <h3>Exercise-5: </h3>
+        <pre>
+            Exercises-5
+
+Write the number finding game code with js code and give 5 rights to the user. Please indicate as the output how many won.
+Output:
+(Congratulations, you got it right about "2"...)
+-------
+(5 you have expired, please try again...)
+</pre>
+            </div>
+            <div class="solute">
+                <h3>Solute:</h3>
+                <pre>
+                    function numberFind() {
+                        const numberRandom =  Math.floor(Math.random()*101);
+                        count = 5; 
+                    
+                        while (true) {
+                            const userGuess = +prompt("Please guess a number 1-100 (including 100) ")
+                            count -=1
+                            if (userGuess===numberRandom) {
+                                console.log(`Congratulations, you got it right about "${numberRandom}"...`);
+                                break;
+                            } else if(userGuess!==numberRandom && count>0 ) {
+                                console.log(`Wrong Guess! You have ${count} right to guess`); 
+                            } else if (count===0){
+                                console.log("5 you have expired, please try again..."); 
+                                break;
+                            }
+                        } 
+                    }
+                    console.log(numberFind());
+     
+                </pre>
+            </div><br>
+             <!-- *******************Exercise-5******************* -->
+             <div class="question">
+                <h3>Exercise-6: </h3>
+        <pre>
+      
+            Task
+            In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up. 
+            Rules
+             1.  The input string will always be lower case but maybe empty.
+            
+             2.  If the character in the string is whitespace then pass over it as if it was an empty seat
+            Example
+            wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+            wave("two words") => ["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
+            wave(" gap ") => [" Gap ", " gAp ", " gaP "]
+
+</pre>
+            </div>
+            <div class="solute">
+                <h3>Solute:</h3>
+                <pre>
+                    function wave(str){
+                        let strArray=[];
+                        for (let i = 0; i < str.length; i++) {
+                            if (str[i]===" "){
+                                continue;
+                            }
+                            else{
+                                strArray.push(str.slice(0,i)+str.slice(i,i+1).toUpperCase()+str.slice(i+1,));
+                            }
+                            
+                        }
+                        return strArray;
+                      }
+                    
+                    console.log(wave("two words"));
+     
+                </pre>
+            </div><br>
 </body>
 </html>
