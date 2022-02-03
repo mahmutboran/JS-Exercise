@@ -64,23 +64,9 @@ console.log(numberFind()); */
 
 
   /* ********Exercise-6******** */
-// function wave(str){
-//     let strArray=[];
-//     for (let i = 0; i < str.length; i++) {
-//         if (str.includes(" ")){
-//             strArray.push(str.slice(0,i+1)+str.slice(i+1,i+2).toUpperCase()+str.slice(i+2,));
-//         }
-//         else{
-//             strArray.push(str.slice(0,i)+str.slice(i,i+1).toUpperCase()+str.slice(i+1,));
-//         }
-        
-//     }
-//     return strArray;
-//   }
 
-// console.log(wave("two words"));
 
-function wave(str){
+/* function wave(str){
     let strArray=[];
     for (let i = 0; i < str.length; i++) {
         if (str[i]===" "){
@@ -94,8 +80,42 @@ function wave(str){
     return strArray;
   }
 
-console.log(wave("two words"));
+console.log(wave("two words")); */
 
 
+ /* ********Exercise-6******** */
+
+//  function fibonacci(number){
+//     let a = 1;
+//     let b = 1;
+//     let c = a+b;
+//     let i = 1;
+//     let output = []
+//     if(number === 0){
+//         return  console.log(`${number} Fibonacci value of the number ${number}`);}
+//     else{      
+//         while(i<number){ 
+//         a = b;
+//         b = c
+//         c = a+b;
+//         output.push(b-a)
+//         i++;
+//      }
+    
+//     }
+//     console.log(output);
+// return console.log(`${number} Fibonacci value of the number ${c}`);
+// }
+
+// fibonacci(7)
+
+
+function fibonacci(n) {
+    if (n===1){return 1;}
+    else if (n===2) {return 1}
+    else { return fibonacci(n-2)+fibonacci(n-1);
+     }
+}
+console.log(fibonacci(7)); 
 
 
