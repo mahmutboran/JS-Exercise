@@ -110,12 +110,58 @@ console.log(wave("two words")); */
 // fibonacci(7)
 
 
-function fibonacci(n) {
+/* function fibonacci(n) {
     if (n===1){return 1;}
     else if (n===2) {return 1}
     else { return fibonacci(n-2)+fibonacci(n-1);
      }
 }
-console.log(fibonacci(7)); 
+console.log(fibonacci(7));  */
 
 
+// var a = ['dog','lion','hen'];
+// a[10] = 'horse';
+
+// console.log(a.length);
+
+// function addTax(total) {
+//     return total * 1.05;
+//     }
+
+// console.log(addTax(50));
+
+/* let discountPrice = function (price) {
+    return price * 0.85;
+    };
+
+console.log(discountPrice(100)); */
+
+function myFunc() { 
+    return this;
+}
+console.log(myFunc());
+
+function vowelConsonant(myStr = prompt().toLowerCase()) {
+    let vowel=0;
+    let consonant=0;
+    for (let i = 0; i < myStr.length; i++) {
+        if ("aeiou".includes(myStr[i]) ) {vowel++} 
+        else if ("bcdfghjklmnpqrstvwxyz".includes(myStr[i])){consonant++}
+    }
+    return `vowel:${vowel},consonant:${consonant}`;
+}
+console.log(vowelConsonant());
+
+/* let myStr = prompt().toLowerCase()
+    let vowel=0;
+    let consonant=0;
+ console.log(myStr)
+
+for (let i = 0; i < myStr.length; i++) {
+
+        if ("aeiou".includes(myStr[i]) ) {vowel+=1} 
+        else if ("bcdfghjklmnpqrstvwxyz".includes(myStr[i])){consonant+=1}
+    }
+
+
+console.log( `vowel:${vowel},consonant:${consonant}`); */

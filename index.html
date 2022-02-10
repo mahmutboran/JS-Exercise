@@ -230,5 +230,29 @@ Output:
      
                 </pre>
             </div><br>
+            <!-- *******************Exercise-8******************* -->
+            <div class="question">
+                <h3>Exercise-8: </h3>
+        <pre>
+            Write a Python/JavaScript code that counts how many vowels and constants a string has that a user entered
+
+</pre>
+            </div>
+            <div class="solute">
+                <h3>Solute:</h3>
+                <pre>
+                    function vowelConsonant(myStr = prompt().toLowerCase()) {
+                        let vowel=0;
+                        let consonant=0;
+                        for (let i = 0; i < myStr.length; i++) {
+                            if ("aeiou".includes(myStr[i]) ) {vowel++} 
+                            else if ("bcdfghjklmnpqrstvwxyz".includes(myStr[i])){consonant++}
+                        }
+                        return `vowel:${vowel},consonant:${consonant}`;
+                    }
+                    console.log(vowelConsonant());
+     
+                </pre>
+            </div><br>
 </body>
 </html>
