@@ -254,5 +254,37 @@ Output:
      
                 </pre>
             </div><br>
+            <!-- *******************Exercise-9******************* -->
+            <div class="question">
+                <h3>Exercise-9: </h3>
+        <pre>
+            Write a Python/JS code to sort the list/array below without using .sort() method of list/array.
+            elements of list/array = [999, 333, 2, 8982, 12, 45, 77, 99, 11]
+            Expected output:
+            [2, 11, 12, 45, 77, 99, 333, 999, 8982]
+
+</pre>
+            </div>
+            <div class="solute">
+                <h3>Solute:</h3>
+                <pre>
+                    function mySort(myArray) {
+                        let count=0
+                        while (count<myArray.length-1) {
+                            count=0 
+                            for (let i = 0; i < myArray.length-1; i++) {
+                                if (myArray[i]>myArray[i+1]){
+                                    myArray.splice(i+1,0,myArray.splice(i,1)[0])
+                                }else{
+                                    count+=1
+                                }
+                            }   
+                        }
+                        return myArray
+                    }
+                    console.log(mySort([999, 333, 2, 8982, 12, 45, 77, 99, 11]))
+     
+                </pre>
+            </div><br>
 </body>
 </html>

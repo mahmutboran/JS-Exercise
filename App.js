@@ -141,7 +141,7 @@ function myFunc() {
 }
 console.log(myFunc());
 
-function vowelConsonant(myStr = prompt().toLowerCase()) {
+/* function vowelConsonant(myStr = prompt().toLowerCase()) {
     let vowel=0;
     let consonant=0;
     for (let i = 0; i < myStr.length; i++) {
@@ -150,7 +150,7 @@ function vowelConsonant(myStr = prompt().toLowerCase()) {
     }
     return `vowel:${vowel},consonant:${consonant}`;
 }
-console.log(vowelConsonant());
+console.log(vowelConsonant()); */
 
 /* let myStr = prompt().toLowerCase()
     let vowel=0;
@@ -165,3 +165,23 @@ for (let i = 0; i < myStr.length; i++) {
 
 
 console.log( `vowel:${vowel},consonant:${consonant}`); */
+
+ /* ******************Exercise-9***************** */
+
+function mySort(myArray) {
+    let count=0
+    while (count<myArray.length-1) {
+        count=0 
+        for (let i = 0; i < myArray.length-1; i++) {
+            if (myArray[i]>myArray[i+1]){
+                myArray.splice(i+1,0,myArray.splice(i,1)[0])
+            }else{
+                count+=1
+            }
+        }   
+    }
+    return myArray
+}
+console.log(mySort([999, 333, 2, 8982, 12, 45, 77, 99, 11]))
+
+
