@@ -136,10 +136,10 @@ console.log(fibonacci(7));  */
 
 console.log(discountPrice(100)); */
 
-function myFunc() { 
+/* function myFunc() { 
     return this;
 }
-console.log(myFunc());
+console.log(myFunc()); */
 
 /* function vowelConsonant(myStr = prompt().toLowerCase()) {
     let vowel=0;
@@ -168,7 +168,7 @@ console.log( `vowel:${vowel},consonant:${consonant}`); */
 
  /* ******************Exercise-9***************** */
 
-function mySort(myArray) {
+/* function mySort(myArray) {
     let count=0
     while (count<myArray.length-1) {
         count=0 
@@ -182,6 +182,14 @@ function mySort(myArray) {
     }
     return myArray
 }
-console.log(mySort([999, 333, 2, 8982, 12, 45, 77, 99, 11]))
+console.log(mySort([999, 333, 2, 8982, 12, 45, 77, 99, 11])) */
+
+ /* ******************Exercise-9***************** */
+
+ function wordRepetition( str=prompt("Enter a word , separator and number of repetitions :").split(" ")) {
+
+    return  Array(+str[2]).fill(str[0]).join(`${str[1]}`)
+}
+console.log(wordRepetition())
 
 

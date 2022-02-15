@@ -286,5 +286,27 @@ Output:
      
                 </pre>
             </div><br>
+                        <!-- *******************Exercise-10******************* -->
+                        <div class="question">
+                            <h3>Exercise-10: </h3>
+                    <pre>
+                        Ask user to enter a word, a separator and number of repetitions. Write a Python/JS code displaying the word with repetition times and having each word separated with separator character.
+                        For example, if user entered word as Tina, separator as ! and repetitions as 3 expected output is "Tina!Tina!Tina"  
+                        Be careful there is no separator character at the end.
+            
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+                                function wordRepetition( str=prompt("Enter a word , separator and number of repetitions :").split(" ")) {
+
+                                    return  Array(+str[2]).fill(str[0]).join(`${str[1]}`)
+                                }
+                                console.log(wordRepetition())
+                 
+                            </pre>
+                        </div><br>
+    <script src="./App.js"></script>
 </body>
 </html>
