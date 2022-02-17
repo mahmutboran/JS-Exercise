@@ -307,6 +307,37 @@ Output:
                  
                             </pre>
                         </div><br>
+                        <!-- *******************Exercise-11******************* -->
+                        <div class="question">
+                            <h3>Exercise-11: </h3>
+                    <pre>
+                        Write a Python/JS code to find greatest common divisor (gcd) of 2 numbers.  
+                        Example:  
+                        gcd of 6, 9 ---> 3  
+                        gcd of 120, 90 --> 30
+            
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+                                function gcd(num1, num2) {
+                                    commonDivisor = [];
+                                    if (num1 % num2 == 0) { return num2 }
+                                    else if (num2 % num1 == 0) { return num1 }
+                                    else {
+                                      for (let i = 0; i < Math.max(num1,num2)/2+1; i++) {
+                                        if (num1%i==0 && num2%i==0) {
+                                            commonDivisor.push(i)
+                                        }
+                                      }
+                                    }
+                                    return commonDivisor[commonDivisor.sort(function(a,b){return a-b}).length-1]
+                                }
+                                console.log(gcd(120,90))
+                 
+                            </pre>
+                        </div><br>
     <script src="./App.js"></script>
 </body>
 </html>

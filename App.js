@@ -27,7 +27,7 @@ console.log(mySort([10, 100, 250, 30, 1, 45])); */
   const limit = Math.sqrt(42);
   console.log(limit); */
 
-  /* ********Exercise-4******** */
+/* ********Exercise-4******** */
 
 /*  function twiceChar(text) {
     let _text="";
@@ -38,8 +38,8 @@ console.log(mySort([10, 100, 250, 30, 1, 45])); */
  }
  console.log(twiceChar("Turkey")); */
 
- 
-  /* ********Exercise-5******** */
+
+/* ********Exercise-5******** */
 
 
 /* function numberFind() {
@@ -63,7 +63,7 @@ console.log(mySort([10, 100, 250, 30, 1, 45])); */
 console.log(numberFind()); */
 
 
-  /* ********Exercise-6******** */
+/* ********Exercise-6******** */
 
 
 /* function wave(str){
@@ -83,7 +83,7 @@ console.log(numberFind()); */
 console.log(wave("two words")); */
 
 
- /* ********Exercise-6******** */
+/* ********Exercise-6******** */
 
 //  function fibonacci(number){
 //     let a = 1;
@@ -101,7 +101,7 @@ console.log(wave("two words")); */
 //         output.push(b-a)
 //         i++;
 //      }
-    
+
 //     }
 //     console.log(output);
 // return console.log(`${number} Fibonacci value of the number ${c}`);
@@ -166,7 +166,7 @@ for (let i = 0; i < myStr.length; i++) {
 
 console.log( `vowel:${vowel},consonant:${consonant}`); */
 
- /* ******************Exercise-9***************** */
+/* ******************Exercise-9***************** */
 
 /* function mySort(myArray) {
     let count=0
@@ -184,12 +184,28 @@ console.log( `vowel:${vowel},consonant:${consonant}`); */
 }
 console.log(mySort([999, 333, 2, 8982, 12, 45, 77, 99, 11])) */
 
- /* ******************Exercise-9***************** */
+/* ******************Exercise-9***************** */
 
- function wordRepetition( str=prompt("Enter a word , separator and number of repetitions :").split(" ")) {
+/*  function wordRepetition( str=prompt("Enter a word , separator and number of repetitions :").split(" ")) {
 
     return  Array(+str[2]).fill(str[0]).join(`${str[1]}`)
 }
-console.log(wordRepetition())
+console.log(wordRepetition()) */
 
 
+/* ******************Exercise-10***************** */
+
+/* function gcd(num1, num2) {
+    commonDivisor = [];
+    if (num1 % num2 == 0) { return num2 }
+    else if (num2 % num1 == 0) { return num1 }
+    else {
+      for (let i = 0; i < Math.max(num1,num2)/2+1; i++) {
+        if (num1%i==0 && num2%i==0) {
+            commonDivisor.push(i)
+        }
+      }
+    }
+    return commonDivisor[commonDivisor.sort(function(a,b){return a-b}).length-1]
+}
+console.log(gcd(120,90)) */
