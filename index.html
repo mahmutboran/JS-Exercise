@@ -338,6 +338,29 @@ Output:
                  
                             </pre>
                         </div><br>
+                        <!-- *******************Exercise-12******************* -->
+                        <div class="question">
+                            <h3>Exercise-12: </h3>
+                    <pre>
+                        Write a Python/JS code to find the numbers that are grater than 150 at below text, and sort these numbers.
+                        text = "Maradona spent 5 years at Argentinos Juniors, from 1976 to 1981 , scoring 115 goals in 167 appearances."
+            
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+                               
+                                function grater150(text) {
+                                    let list=[];
+                                    text.split(" ").forEach(e => {if ( +e>150){list.push(e)}});return list;
+                                 }
+                                 console.log(grater150("Maradona spent 5 years at Argentinos Juniors, from 1976 to 1981 , scoring 115 goals in 167 appearances."))
+
+
+                                
+                            </pre>
+                        </div><br>
     <script src="./App.js"></script>
 </body>
 </html>

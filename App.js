@@ -209,3 +209,15 @@ console.log(wordRepetition()) */
     return commonDivisor[commonDivisor.sort(function(a,b){return a-b}).length-1]
 }
 console.log(gcd(120,90)) */
+
+/* ******************Exercise-11***************** */
+
+
+ function grater150(text) {
+   let list=[];
+   text.split(" ").forEach(e => {if ( +e>150){list.push(e)}});return list;
+}
+console.log(grater150("Maradona spent 5 years at Argentinos Juniors, from 1976 to 1981 , scoring 115 goals in 167 appearances."))
+
+
+
