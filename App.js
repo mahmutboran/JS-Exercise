@@ -184,7 +184,7 @@ console.log( `vowel:${vowel},consonant:${consonant}`); */
 }
 console.log(mySort([999, 333, 2, 8982, 12, 45, 77, 99, 11])) */
 
-/* ******************Exercise-9***************** */
+/* ******************Exercise-10***************** */
 
 /*  function wordRepetition( str=prompt("Enter a word , separator and number of repetitions :").split(" ")) {
 
@@ -193,7 +193,7 @@ console.log(mySort([999, 333, 2, 8982, 12, 45, 77, 99, 11])) */
 console.log(wordRepetition()) */
 
 
-/* ******************Exercise-10***************** */
+/* ******************Exercise-11***************** */
 
 /* function gcd(num1, num2) {
     commonDivisor = [];
@@ -210,14 +210,28 @@ console.log(wordRepetition()) */
 }
 console.log(gcd(120,90)) */
 
-/* ******************Exercise-11***************** */
+/* ******************Exercise-12***************** */
 
 
- function grater150(text) {
+/*  function grater150(text) {
    let list=[];
    text.split(" ").forEach(e => {if ( +e>150){list.push(e)}});return list;
 }
-console.log(grater150("Maradona spent 5 years at Argentinos Juniors, from 1976 to 1981 , scoring 115 goals in 167 appearances."))
+console.log(grater150("Maradona spent 5 years at Argentinos Juniors, from 1976 to 1981 , scoring 115 goals in 167 appearances.")) */
 
 
 
+/* ******************Exercise-13***************** */
+
+/* function anyTwoNumbers(myList,k) {
+    myList.forEach(i => {
+        myList.slice(myList.indexOf(i)+1,).forEach(j => {
+            if (i+j == k) {
+                console.log (`${i}+${j} = ${k} =>> ${true}`)
+            }
+        });
+        
+    });
+    
+}
+console.log(anyTwoNumbers([10,15,3,7],17)); */

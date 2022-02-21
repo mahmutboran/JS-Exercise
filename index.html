@@ -361,6 +361,37 @@ Output:
                                 
                             </pre>
                         </div><br>
+                        <!-- *******************Exercise-13******************* -->
+                        <div class="question">
+                            <h3>Exercise-13: </h3>
+                    <pre>
+                        This is an interview question asked by Google.
+                        Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
+                        For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
+            
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+                                function anyTwoNumbers(myList,k) {
+                                    myList.forEach(i => {
+                                        myList.slice(myList.indexOf(i)+1,).forEach(j => {
+                                            if (i+j == k) {
+                                                console.log (`${i}+${j} = ${k} =>> ${true}`)
+                                            }
+                                        });
+                                        
+                                    });
+                                    
+                                }
+                                console.log(anyTwoNumbers([10,15,3,7],17));
+                                
+
+
+                                
+                            </pre>
+                        </div><br>
     <script src="./App.js"></script>
 </body>
 </html>
