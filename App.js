@@ -235,3 +235,27 @@ console.log(grater150("Maradona spent 5 years at Argentinos Juniors, from 1976 t
     
 }
 console.log(anyTwoNumbers([10,15,3,7],17)); */
+
+
+
+/* ******************Exercise-14***************** */
+function newArray(myList) {
+    newList=[];
+    myList.forEach(e => { let num = 1;
+        myList.forEach(k => {e!=k ? num*=k :""});
+        newList.push(num)});
+    return newList
+}
+console.log(newArray([1, 2, 3, 4, 5]))
+
+
+/* const array = [1, 2, 3, 4, 5]
+const newArray = []
+
+for(let i=0; i<array.length; i++){
+    let temp = array.shift()
+    newArray.push(array.reduce((a, b) => a * b))
+    array.push(temp)
+}
+
+console.log(newArray) */

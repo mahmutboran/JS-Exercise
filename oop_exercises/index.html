@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    div {
+        
+        width: 30vw;
+        height: 10vw;
+        overflow: scroll;
+        border: 1px solid aquamarine;
+        display: inline-block;
+      
+        
+    }
+</style>
+<body>
+    <h1 >JavaScript Exercises/OOP</h1>
+    <div class="question">
+        <h3>Exercise-1: </h3>
+<pre>Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.</pre>
+    </div>
+    <div class="solute">
+        <h3>Solute:</h3>
+        <pre>
+            var student = {
+                name : "David Rayy",
+                sclass : "VI",
+                rollno : 12 };
+            
+                console.log(student);
+                delete student.rollno;
+                console.log(student);
+            
+        </pre>
+    </div><br>
+    <!--******************* exercise-2********************** -->
+    <div class="question">
+        <h3>Exercise-2: </h3>
+<pre>Write a JavaScript program to get the length of a JavaScript object.</pre>
+    </div>
+    <div class="solute">
+        <h3>Solute:</h3>
+        <pre>
+            var student = {
+                name : "David Rayy",
+                sclass : "VI",
+                rollno : 12 };
+            
+            Object.myLenght = function(myFunc){
+                var count = 0;
+                for (const key in myFunc) {
+                    if (myFunc.hasOwnProperty(key)) {
+                        count++;
+                    }
+                }
+                return count
+            }
+            console.log(Object.myLenght(student))
+
+         
+        </pre>
+    </div><br>
+    <!--******************* exercise-3********************** -->
+    <div class="question">
+        <h3>Exercise-3: </h3>
+<pre>Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books. Go to the editor
+
+    var library = [ 
+       {
+           author: 'Bill Gates',
+           title: 'The Road Ahead',
+           readingStatus: true
+       },
+       {
+           author: 'Steve Jobs',
+           title: 'Walter Isaacson',
+           readingStatus: true
+       },
+       {
+           author: 'Suzanne Collins',
+           title:  'Mockingjay: The Final Book of The Hunger Games', 
+           readingStatus: false
+       }];</pre>
+    </div>
+    <div class="solute">
+        <h3>Solute:</h3>
+        <pre>
+            
+            for (let i = 0; i < library.length; i++) {
+                console.log(library[i].title+" "+library[i].author +" "+library[i].readingStatus)
+                 
+             }
+
+        </pre>
+    </div><br>
+    <!--******************* exercise-4********************** -->
+    <div class="question">
+        <h3>Exercise-4: </h3>
+<pre>
+    Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes. 
+    Volume of a cylinder : V = πr2h
+    where r is the radius and h is the height of the cylinder.
+
+
+</pre>
+    </div>
+    <div class="solute">
+        <h3>Solute:</h3>
+        <pre>
+          
+            class CylinderVolume{
+                #pi =3.14
+                constructor(radius,height){
+              this.radius = radius;
+              this.height = height   
+            } volume(){
+                return (Math.pow(this.radius,2)*this.height*this.#pi).toFixed(4)
+            }
+            }
+            
+            let myCylinder = new CylinderVolume(5,5)
+            console.log(myCylinder.volume())
+            
+            console.log(Math.pow(4,2))
+
+        </pre>
+    </div><br>
+    <!--******************* exercise-5********************** -->
+    <div class="question">
+        <h3>Exercise-5: </h3>
+<pre>
+    Write a Bubble Sort algorithm in JavaScript. 
+    Note : Bubble sort is a simple sorting algorithm that works by repeatedly stepping through the list to be sorted,
+    Sample Data: [6,4,0, 3,-2,1]
+    Expected Output : [-2, 0, 1, 3, 4, 6]
+
+
+</pre>
+    </div>
+    <div class="solute">
+        <h3>Solute:</h3>
+        <pre>
+          
+         
+
+        </pre>
+    </div><br>
+    <script src="./app.js"></script>
+</body>
+</html>
