@@ -239,14 +239,14 @@ console.log(anyTwoNumbers([10,15,3,7],17)); */
 
 
 /* ******************Exercise-14***************** */
-function newArray(myList) {
-    newList=[];
-    myList.forEach(e => { let num = 1;
-        myList.forEach(k => {e!=k ? num*=k :""});
-        newList.push(num)});
-    return newList
-}
-console.log(newArray([1, 2, 3, 4, 5]))
+// function newArray(myList) {
+//     newList=[];
+//     myList.forEach(e => { let num = 1;
+//         myList.forEach(k => {e!=k ? num*=k :""});
+//         newList.push(num)});
+//     return newList
+// }
+// console.log(newArray([1, 2, 3, 4, 5]))
 
 
 /* const array = [1, 2, 3, 4, 5]
@@ -259,3 +259,26 @@ for(let i=0; i<array.length; i++){
 }
 
 console.log(newArray) */
+
+
+/* ******************Exercise-15***************** */
+// function firstMissing(arr) {
+//     let myArr = arr.filter(x => x>0 ? x:"").sort(function (a,b) {return a-b});
+//     const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
+//     let newArr = range(Math.min(...myArr),Math.max(...myArr),1);
+//     if (arr.includes(0)) {myArr.push(0);newArr.push(myArr[myArr.length-2]+1)};
+//     for (let i = 0; i < newArr.length; i++) {
+//         if (myArr[i]!=newArr[i]) {return newArr[i];}
+//     }
+// }
+// console.log(firstMissing([3, 4,-1, 1]))
+// console.log(firstMissing([1,0, 2]))
+// console.log(firstMissing([7,5, 9, 6]))
+// console.log(firstMissing([0,8,7,14,5, 9,6]))
+
+
+
+
+
+
+
