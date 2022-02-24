@@ -453,6 +453,59 @@ You can modify the input array in-place.
                                 
                             </pre>
                         </div><br>
+                        <!-- *******************Exercise-16******************* -->
+                        <div class="question">
+                            <h3>Exercise-16: </h3>
+                    <pre>
+                        This is an interview question asked by Twitter.
+                        Implement an autocomplete system. That is, given a query string s and a set of all possible query strings, return all strings in the set that have s as a prefix.
+                        For example, given the query string de and the set of strings [dog, deer, deal], return [deer, deal].
+            
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+                              
+                                function queryString(arr,str) {
+                                    let newArr = []
+                                    for (const i of arr) {i.startsWith(str) ? newArr.push(i):""}
+                                    return newArr
+                                }
+                                console.log(queryString(["dog", "deer", "deal"],"de"))
+
+
+                                
+                            </pre>
+                        </div><br>
+                        <!-- *******************Exercise-17******************* -->
+                        <div class="question">
+                            <h3>Exercise-17: </h3>
+                    <pre>
+                        var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]; en çok tekrar eden elemanı bul
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+                                var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+                                var myDict= new Map()
+                                let count=0
+                                for (const i of arr1) {
+                                    for (const j of arr1) {i==j ? count+=1:""}
+                                    myDict.set(i,count)
+                                    count=0
+                                }
+                                for (const [key,value] of myDict) {
+                                    value==Math.max(...myDict.values()) ? console.log(`En çok tekrar eden ${key} , tekrar sayisi ${value}`):""
+                                }
+                                
+                             
+
+
+                                
+                            </pre>
+                        </div><br>
     <script src="./App.js"></script>
 </body>
 </html>

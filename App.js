@@ -263,9 +263,10 @@ console.log(newArray) */
 
 /* ******************Exercise-15***************** */
 // function firstMissing(arr) {
-//     let myArr = arr.filter(x => x>0 ? x:"").sort(function (a,b) {return a-b});
+//     let myArr = arr.filter(x => x>0 ).sort(function (a,b) {return a-b});
 //     const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
 //     let newArr = range(Math.min(...myArr),Math.max(...myArr),1);
+//     console.log(newArr)
 //     if (arr.includes(0)) {myArr.push(0);newArr.push(myArr[myArr.length-2]+1)};
 //     for (let i = 0; i < newArr.length; i++) {
 //         if (myArr[i]!=newArr[i]) {return newArr[i];}
@@ -275,6 +276,34 @@ console.log(newArray) */
 // console.log(firstMissing([1,0, 2]))
 // console.log(firstMissing([7,5, 9, 6]))
 // console.log(firstMissing([0,8,7,14,5, 9,6]))
+
+
+/* ******************Exercise-16***************** */
+
+/* function queryString(arr,str) {
+    let newArr = []
+    for (const i of arr) {i.startsWith(str) ? newArr.push(i):""}
+    return newArr
+}
+console.log(queryString(["dog", "deer", "deal"],"de")) */
+
+/* ******************Exercise-17***************** */
+
+
+var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+var myDict= new Map()
+let count=0
+for (const i of arr1) {
+    for (const j of arr1) {i==j ? count+=1:""}
+    myDict.set(i,count)
+    count=0
+}
+for (const [key,value] of myDict) {
+    value==Math.max(...myDict.values()) ? console.log(`En çok tekrar eden ${key} , tekrar sayisi ${value}`):""
+}
+
+
+
 
 
 
