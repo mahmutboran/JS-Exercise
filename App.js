@@ -290,24 +290,30 @@ console.log(queryString(["dog", "deer", "deal"],"de")) */
 /* ******************Exercise-17***************** */
 
 
-var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
-var myDict= new Map()
-let count=0
-for (const i of arr1) {
-    for (const j of arr1) {i==j ? count+=1:""}
-    myDict.set(i,count)
-    count=0
+// var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+// var myDict= new Map()
+// let count=0
+// for (const i of arr1) {
+//     for (const j of arr1) {i==j ? count+=1:""}
+//     myDict.set(i,count)
+//     count=0
+// }
+// for (const [key,value] of myDict) {
+//     value==Math.max(...myDict.values()) ? console.log(`En çok tekrar eden ${key} , tekrar sayisi ${value}`):""
+//}
+/* ******************Exercise-18***************** */
+
+
+function longestSubstring(s, k) {
+    let _s = new Map();
+    for (const i in s) {
+        for (const j in s) {
+            if (new Set(s.slice(i, Number(j) + 1)).size == k) {
+                _s.set(s.slice(i, Number(j) + 1).length, s.slice(i, Number(j) + 1))
+            }
+        }
+    }
+    return _s.get(Math.max(..._s.keys()))
 }
-for (const [key,value] of myDict) {
-    value==Math.max(...myDict.values()) ? console.log(`En çok tekrar eden ${key} , tekrar sayisi ${value}`):""
-}
 
-
-
-
-
-
-
-
-
-
+console.log(longestSubstring("abcba",2))
