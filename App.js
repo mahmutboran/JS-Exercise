@@ -304,16 +304,47 @@ console.log(queryString(["dog", "deer", "deal"],"de")) */
 /* ******************Exercise-18***************** */
 
 
-function longestSubstring(s, k) {
+// function longestSubstring(s, k) {
+//     let _s = new Map();
+//     for (const i in s) {
+    
+//         for (const j in s) {
+   
+//             if (new Set(s.slice(i, Number(j) + 1)).size == k) {
+//                 console.log(s.slice(i, Number(j) + 1))
+                
+               
+//                 _s.set(s.slice(i, Number(j) + 1).length, s.slice(i, Number(j) + 1))
+//             }
+//         }
+//     }
+//     console.log(_s)
+//     return _s.get(Math.max(..._s.keys()))
+// }
+
+// console.log(longestSubstring("abcbeke",2))
+
+
+/* ******************Exercise-19***************** */
+
+
+function longestSubstring(s) {
     let _s = new Map();
     for (const i in s) {
         for (const j in s) {
-            if (new Set(s.slice(i, Number(j) + 1)).size == k) {
+            if (new Set(s.slice(i, Number(j) + 1)).size == s.slice(i, Number(j) + 1).length) {
                 _s.set(s.slice(i, Number(j) + 1).length, s.slice(i, Number(j) + 1))
             }
         }
     }
-    return _s.get(Math.max(..._s.keys()))
+    return _s.get(Math.max(..._s.keys())).length
 }
+console.log(longestSubstring("abcabcbb"))
+console.log(longestSubstring("bbbbb"))
+console.log(longestSubstring("pwwkew"))
 
-console.log(longestSubstring("abcba",2))
+
+
+
+
+
