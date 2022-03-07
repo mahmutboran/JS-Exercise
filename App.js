@@ -328,20 +328,41 @@ console.log(queryString(["dog", "deer", "deal"],"de")) */
 /* ******************Exercise-19***************** */
 
 
-function longestSubstring(s) {
-    let _s = new Map();
-    for (const i in s) {
-        for (const j in s) {
-            if (new Set(s.slice(i, Number(j) + 1)).size == s.slice(i, Number(j) + 1).length) {
-                _s.set(s.slice(i, Number(j) + 1).length, s.slice(i, Number(j) + 1))
-            }
-        }
-    }
-    return _s.get(Math.max(..._s.keys())).length
+// function longestSubstring(s) {
+//     let _s = new Map();
+//     for (const i in s) {
+//         for (const j in s) {
+//             if (new Set(s.slice(i, Number(j) + 1)).size == s.slice(i, Number(j) + 1).length) {
+//                 _s.set(s.slice(i, Number(j) + 1).length, s.slice(i, Number(j) + 1))
+//             }
+//         }
+//     }
+//     return _s.get(Math.max(..._s.keys())).length
+// }
+// console.log(longestSubstring("abcabcbb"))
+// console.log(longestSubstring("bbbbb"))
+// console.log(longestSubstring("pwwkew"))
+
+/* ******************Exercise-20***************** */
+
+function maxSubarray(arr,k) {
+    let count=0,_arr=[];
+    while (count<arr.length-k+1) {
+        _arr.push(Math.max(...arr.slice(count,count+k))),count+=1}
+    return _arr
 }
-console.log(longestSubstring("abcabcbb"))
-console.log(longestSubstring("bbbbb"))
-console.log(longestSubstring("pwwkew"))
+console.log( maxSubarray([10, 5, 2, 7, 8, 7],3))
+
+
+
+
+
+// def maxSubarray(arr,k):
+//   count=0
+//   while count<len(arr)-k+1:
+//     print(max(arr[count:count+k]))
+//     count+=1
+// maxSubarray([10, 5, 2, 7, 8, 7],3)
 
 
 

@@ -584,6 +584,30 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
                                 
                             </pre>
                         </div><br>
+                        <!-- *******************Exercise-20******************* -->
+                        <div class="question">
+                            <h3>Exercise-20: </h3>
+                    <pre>
+                        This is an interview question asked by Google.
+                        Given an array of integers and a number k, where 1 <= k <= length of the array, compute the maximum values of each subarray of length k.
+                        For example, given array = [10, 5, 2, 7, 8, 7] and k = 3, we should get: [10, 7, 8, 8], since:
+                        10 = max(10, 5, 2) 
+                        7 = max(5, 2, 7) 
+                        8 = max(2, 7, 8)
+                        8 = max(7, 8, 7)
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+                                function maxSubarray(arr,k) {
+                                    let count=0,_arr=[];
+                                    while (count<arr.length-k+1) {
+                                        _arr.push(Math.max(...arr.slice(count,count+k))),count+=1}
+                                    return _arr
+                                }
+                                console.log( maxSubarray([10, 5, 2, 7, 8, 7],3))
+                        </div><br>
     <script src="./App.js"></script>
 </body>
 </html>
