@@ -348,7 +348,9 @@ console.log(queryString(["dog", "deer", "deal"],"de")) */
 function maxSubarray(arr,k) {
     let count=0,_arr=[];
     while (count<arr.length-k+1) {
-        _arr.push(Math.max(...arr.slice(count,count+k))),count+=1}
+        _arr.push(Math.max(...arr.slice(count,count+k)))
+        count+=1
+    }
     return _arr
 }
 console.log( maxSubarray([10, 5, 2, 7, 8, 7],3))
