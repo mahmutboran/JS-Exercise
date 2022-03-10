@@ -345,26 +345,53 @@ console.log(queryString(["dog", "deer", "deal"],"de")) */
 
 /* ******************Exercise-20***************** */
 
-function maxSubarray(arr,k) {
-    let count=0,_arr=[];
-    while (count<arr.length-k+1) {
-        _arr.push(Math.max(...arr.slice(count,count+k)))
-        count+=1
-    }
-    return _arr
-}
-console.log( maxSubarray([10, 5, 2, 7, 8, 7],3))
+// function maxSubarray(arr,k) {
+//     let count=0,_arr=[];
+//     while (count<arr.length-k+1) {
+//         _arr.push(Math.max(...arr.slice(count,count+k)))
+//         count+=1
+//     }
+//     return _arr
+// }
+// console.log( maxSubarray([10, 5, 2, 7, 8, 7],3))
+/* ******************Exercise-21***************** */
+
+// function inputString(s) {
+//    for (const i in s) {
+//         if (s.length%2!=0) return false;
+//          else if (s.includes("()")) s=s.replace("()","");
+//          else if (s.includes("[]")) s=s.replace("[]","");
+//          else if (s.includes("{}")) s=s.replace("{}",""); 
+//          else if (s=="") return true
+//          else return false  
+//     }
+// }
+// console.log( inputString("{()[{}]{}([)]"));
+// console.log( inputString("(([]{})[])[]"));
+// console.log( inputString("(([]{)}[])[]"));
 
 
+// let s="{()([{}])[]{}[]}"
+// console.log(s)
+// let count=1
+// while (s.length>1) {
+//     if (s.length%2!=0) break;
+//      else if (s.includes("()")) s=s.replace("()","");
+//      else if (s.includes("[]")) s=s.replace("[]","");
+//      else if (s.includes("{}")) s=s.replace("{}","");
+
+// }
+
+// else if (s.includes("[]")) {
+//     console.log("2")
+//     s=s.replace("[]","");
+// }
+// else if (s.includes("{}")) {
+//     console.log("3")
+// }
+//console.log(s)
 
 
-
-// def maxSubarray(arr,k):
-//   count=0
-//   while count<len(arr)-k+1:
-//     print(max(arr[count:count+k]))
-//     count+=1
-// maxSubarray([10, 5, 2, 7, 8, 7],3)
 
 
 
