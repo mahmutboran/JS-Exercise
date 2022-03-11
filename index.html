@@ -646,6 +646,28 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
                                
                       </pre>
                         </div><br>
+                        <!-- *******************Exercise-22******************* -->
+                        <div class="question">
+                            <h3>Exercise-22: </h3>
+                    <pre>
+                     <img src="./image (30).png" alt="">
+
+                        
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+                                const users =[
+                                {id:1,name:"Al",isActive:true,age:20},
+                                {id:2,name:"Arif",isActive:true,age:18},
+                                {id:3,name:"Al Arif",isActive:false,age:30},
+                            ];
+                            let result = users.filter(x=>x.isActive).sort((a,b)=>a.age-b.age)
+                            console.log(result);
+                               
+                      </pre>
+                        </div><br>
     <script src="./App.js"></script>
 </body>
 </html>

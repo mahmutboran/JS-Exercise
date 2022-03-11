@@ -371,25 +371,18 @@ console.log(queryString(["dog", "deer", "deal"],"de")) */
 // console.log( inputString("(([]{)}[])[]"));
 
 
-// let s="{()([{}])[]{}[]}"
-// console.log(s)
-// let count=1
-// while (s.length>1) {
-//     if (s.length%2!=0) break;
-//      else if (s.includes("()")) s=s.replace("()","");
-//      else if (s.includes("[]")) s=s.replace("[]","");
-//      else if (s.includes("{}")) s=s.replace("{}","");
+/* ******************Exercise-22***************** */
 
-// }
+// const users =[
+//     {id:1,name:"Al",isActive:true,age:20},
+//     {id:2,name:"Arif",isActive:true,age:18},
+//     {id:3,name:"Al Arif",isActive:false,age:30},
+// ];
+// let result = users.filter(x=>x.isActive).sort((a,b)=>a.age-b.age)
+// console.log(result);
 
-// else if (s.includes("[]")) {
-//     console.log("2")
-//     s=s.replace("[]","");
-// }
-// else if (s.includes("{}")) {
-//     console.log("3")
-// }
-//console.log(s)
+
+
 
 
 
