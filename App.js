@@ -307,13 +307,13 @@ console.log(queryString(["dog", "deer", "deal"],"de")) */
 // function longestSubstring(s, k) {
 //     let _s = new Map();
 //     for (const i in s) {
-    
+
 //         for (const j in s) {
-   
+
 //             if (new Set(s.slice(i, Number(j) + 1)).size == k) {
 //                 console.log(s.slice(i, Number(j) + 1))
-                
-               
+
+
 //                 _s.set(s.slice(i, Number(j) + 1).length, s.slice(i, Number(j) + 1))
 //             }
 //         }
@@ -382,12 +382,112 @@ console.log(queryString(["dog", "deer", "deal"],"de")) */
 // console.log(result);
 
 
+/* ******************Exercise-23***************** */
+
+// function sortArray(array) {
+//     const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
+//     return array.map((x) => x % 2 ? odd.shift() : x);
+//   }
+// function sortArray(array) {
+//     const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
+//     return array.map((x) => x % 2 ? odd.shift() : x);
+//   }
 
 
+// console.log( sortArray( [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] ))
 
 
+// let ad ="sdfsdfsd";
+// console.log(ad.split(""));
 
 
+// const obj = {
+//     A: 1,
+//     B: 2,
+//     C: 3,
+//     D: 4,
+//     E: 5,
+//     F: 6,
+//     G: 7,
+//     H: 8,
+//     I: 9,
+//     J: 10,
+//     K: 11,
+//     L: 12,
+//     M: 13,
+//     N: 14,
+//     O: 15,
+//     P: 16,
+//     Q: 17,
+//     R: 18,
+//     S: 19,
+//     T: 20,
+//     U: 21,
+//     V: 22,
+//     W: 23,
+//     X: 24,
+//     Y: 25,
+//     Z: 26,
+//   }
+
+//   function setWord(word) {
+//     let arr = []
+//     let str = ''
+//     for (const i in String(word)) {
+//       for (const [key, value] of Object.entries(obj)) {
+//         if (value == +String(word)[i]) arr.push(key)
+//       }
+//     }
+//     str = arr.join('')
+//     arr = []
+//     let first = String(word).slice(0, 1)
+//     let second = String(word).slice(1, 3)
+//     for (const [key, value] of Object.entries(obj)) {
+//       if (value == +first || value == +second) arr.push(key)
+//     }
+//     str += ' ' + arr.join('')
+//     arr = []
+//     let sfirst = String(word).slice(0, 2)
+//     let ssecond = String(word).slice(2, 3)
+//     for (const [key, value] of Object.entries(obj)) {
+//       if (value == +sfirst || value == +ssecond) arr.push(key)
+//     }
+//     str += ' ' + arr.join('')
+//     console.log(str)
+//   }
+
+//   setWord(1213)
+
+//   let ser ="sdfsf";
+
+//  console.log( ser.substring(0,2))
+
+/* ******************Exercise-24***************** */
 
 
+function possibleLetters(n) {
+    let phoneNum = {
+        "2": ["a", "b", "c"],
+        "3": ["d", "e", "f"],
+        "4": ["g", "h", "i"],
+        "5": ["j", "k", "l"],
+        "6": ["m", "n", "o"],
+        "7": ["p", "q", "r", "s"],
+        "8": ["t", "u", "v"],
+        "9": ["w", "x", "y", "z"]
+    }
+    let _n=[] , result= []
 
+    for (const i of String(n)){  _n.push(phoneNum[i])}
+
+    for (let i = 0; i < _n.length-1; i++) {
+        for (let j of _n[i]) {
+            for (let k of _n[i+1]) {
+                result.push(j+k)
+            }
+        }
+    }
+    return result
+};
+
+console.log(possibleLetters(89))      
