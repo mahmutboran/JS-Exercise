@@ -745,6 +745,54 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
                                
                       </pre>
                         </div><br>
+                        <!-- *******************Exercise-25******************* -->
+                        <div class="question">
+                            <h3>Exercise-25: </h3>
+                    <pre>
+                        '''Have the function StockPicker(arr) take the array of numbers storedin arr which will contain integers that represent the amount in dollarsthat a single stock is worth, and return the maximum profit that couldhave been made by buying stock on day x and selling stock on day y where y > x.
+                        For example: if arr is [44, 30, 24, 32, 35, 30, 40, 38,15] then your program should return 16 because at index 2 the stock was worth $24 and at index 6 the stock was then worth $40, so if you bought the stock at 24 and sold it at 40, you would have made a profitof $16, which is the maximum profit that could have been made with thislist of stock prices.If there is not profit that could have been made with the stock prices,then your program should return -1.
+                        For exmaple: arr is [10, 9, 8, 2]then your program should return -1.
+                        Examples:Input: [10, 12, 4, 5, 9]Output: 5'''
+
+                        
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+                                let arr = [44, 30, 24, 32, 35, 30, 40, 38, 15]
+                                function coding(arr) {
+                                    let profit = []
+                                    arr.forEach((e, i) => {
+                                        if (e > arr[i + 1]) {
+                                            arr = arr.slice(i + 1, -1)
+                                            profit.push(Math.max(...arr) - Math.min(...arr))
+                                            console.log(arr);
+                                        }
+                                    });
+                                    return Math.max(...profit)
+                                }  
+                   
+                               
+                      </pre>
+                        </div><br>
+                        <!-- *******************Exercise-26******************* -->
+                        <div class="question">
+                            <h3>Exercise-26: </h3>
+                    <pre>
+        
+
+                        
+            </pre>
+                        </div>
+                        <div class="solute">
+                            <h3>Solute:</h3>
+                            <pre>
+           
+                   
+                               
+                      </pre>
+                        </div><br>
     <script src="./App.js"></script>
 </body>
 </html>

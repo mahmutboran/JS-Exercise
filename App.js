@@ -465,29 +465,84 @@ console.log(queryString(["dog", "deer", "deal"],"de")) */
 /* ******************Exercise-24***************** */
 
 
-function possibleLetters(n) {
-    let phoneNum = {
-        "2": ["a", "b", "c"],
-        "3": ["d", "e", "f"],
-        "4": ["g", "h", "i"],
-        "5": ["j", "k", "l"],
-        "6": ["m", "n", "o"],
-        "7": ["p", "q", "r", "s"],
-        "8": ["t", "u", "v"],
-        "9": ["w", "x", "y", "z"]
-    }
-    let _n=[] , result= []
+// function possibleLetters(n) {
+//     let phoneNum = {
+//         "2": ["a", "b", "c"],
+//         "3": ["d", "e", "f"],
+//         "4": ["g", "h", "i"],
+//         "5": ["j", "k", "l"],
+//         "6": ["m", "n", "o"],
+//         "7": ["p", "q", "r", "s"],
+//         "8": ["t", "u", "v"],
+//         "9": ["w", "x", "y", "z"]
+//     }
+//     let _n=[] , result= []
 
-    for (const i of String(n)){  _n.push(phoneNum[i])}
+//     for (const i of String(n)){  _n.push(phoneNum[i])}
 
-    for (let i = 0; i < _n.length-1; i++) {
-        for (let j of _n[i]) {
-            for (let k of _n[i+1]) {
-                result.push(j+k)
-            }
+//     for (let i = 0; i < _n.length-1; i++) {
+//         for (let j of _n[i]) {
+//             for (let k of _n[i+1]) {
+//                 result.push(j+k)
+//             }
+//         }
+//     }
+//     return result
+// };
+
+// console.log(possibleLetters(89))    
+
+// let strz = "H3ello9-9"
+// let totalNum = 0;
+// let alpha= "abcdefghijklmnopqrstuvwxyz"
+// let alphaNum = 0
+// for (const i of strz) {
+
+//     if ("123456789".includes(i)) {
+//          totalNum+=Number(i)
+//     }else if (alpha.includes(i) || alpha.toUpperCase().includes(i)){
+//         alphaNum++
+//     }
+// }
+// console.log(totalNum);
+// console.log(alphaNum);
+// console.log(21/5);
+// console.log(Math.ceil(totalNum/alphaNum));
+// let num =11121
+// let str = String(num)
+
+// if (str.length==1) {
+//     return -1
+// }
+// for (const i of object) {
+
+// }
+
+let arr = [44, 30, 24, 32, 35, 30, 40, 38, 15]
+
+function coding(arr) {
+    let profit = []
+    arr.forEach((e, i) => {
+        if (e > arr[i + 1]) {
+            arr = arr.slice(i + 1, -1)
+            profit.push(Math.max(...arr) - Math.min(...arr))
+            console.log(arr);
         }
-    }
-    return result
-};
+    });
+    return Math.max(...profit)
 
-console.log(possibleLetters(89))      
+}
+
+// if (arr[0] === Math.max(...arr)) {
+//     return -1
+// } else if (arr.indexOf(Math.min(...arr)) < arr.indexOf(Math.max(...arr))) {
+
+//     return Math.max(...arr)-Math.min(...arr)
+// }else{
+//     arr=arr.slice(0,arr.indexOf(Math.max(...arr)))
+//     return Math.max(...arr)-Math.min(...arr)
+
+
+
+console.log(coding(arr1))
+
